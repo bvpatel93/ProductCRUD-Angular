@@ -1,0 +1,80 @@
+<!-- <ul class="heroes">
+  <li *ngFor="let product of productlist">
+  <span>{{product.englishName}}</span>  <br/>
+  <span>{{product.description}}</span>  <br/>
+  </li>
+</ul> -->
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+          {{ 'products.Products' | translate }}
+        <small>{{ 'products.lstallproduct' | translate }}</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> {{ 'products.home' | translate }}</a></li>
+        <li><a href="#">{{ 'products.Products' | translate }}</a></li>
+        <li class="active">{{ 'products.lstproduct' | translate }}</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box">
+            <div class="box-header">
+              <div class="col-sm-12">
+                <div class="col-sm-10"><h3 class="box-title">{{ 'products.lstproduct' | translate }}</h3></div>
+                <div class="col-sm-2"><button class="btn btn-block btn-primary col-sm-1" (click)="AddProduct()">{{ 'products.addproduct' | translate }}</button></div>
+              </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+            
+<kendo-grid [data]="productlist" [rowClass]="rowCallback" [selectable]="true">
+    <kendo-grid-column field="productId" title="ID" width="40">
+    </kendo-grid-column>
+    <kendo-grid-column field="productEnglishName" title="{{ 'products.enname' | translate }}" width="250">
+    </kendo-grid-column>
+    <!-- <kendo-grid-column field="productArabicName" title="{{ 'products.arname' | translate }}">
+    </kendo-grid-column> -->
+    <kendo-grid-column field="description" title="{{ 'products.Description' | translate }}" >
+    </kendo-grid-column>
+    <kendo-grid-column field="quantity" title="{{ 'products.Instock' | translate }}" width="200">
+        <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">
+         <div *ngIf="dataItem.quantity > 0"> <i class="fa fa-smile-o" aria-hidden="true"></i>&nbsp;{{ 'products.Instock' | translate }} ({{dataItem.quantity}}) </div> 
+         <div style="color: white;background-color:red;" *ngIf="dataItem.quantity <= 0"><i class="fa fa-frown-o" aria-hidden="true"></i>&nbsp;{{ 'products.outofstock' | translate }} ({{dataItem.quantity}}) </div>          
+        </ng-template>
+    </kendo-grid-column>
+    <kendo-grid-column field="disabled" title="{{ 'products.Discontinued' | translate }}" width="80">
+        <ng-template kendoGridCellTemplate let-dataItem>
+            <input type="checkbox" [checked]="dataItem.disabled" disabled/>
+        </ng-template>
+    </kendo-grid-column>
+    <kendo-grid-column field="createdDate" title="{{ 'products.CreatedDate' | translate }}">
+      </kendo-grid-column>
+    <kendo-grid-column field="productId" title="Action" width="120">
+      <ng-template kendoGridCellTemplate let-dataItem>          
+        <button mat-button (click)="editProduct(dataItem.productId)"><i class="fa fa-edit"></i></button>&nbsp;
+        <button mat-button (click)="deleteProduct(dataItem.productId)"><i class="fa fa-remove"></i></button>
+      </ng-template>
+  </kendo-grid-column>
+  <ng-template kendoGridDetailTemplate let-dataItem>
+      <section>
+          <p><strong>{{ 'products.enname' | translate }} : </strong> {{dataItem.productEnglishName}}</p>
+        <p><strong>{{ 'products.arname' | translate }}: </strong> {{dataItem.productArabicName}}</p>
+        <p><strong>{{ 'products.Description' | translate }}: </strong> {{dataItem.description}}</p>
+        <p><strong>{{ 'products.Instock' | translate }}:</strong> {{dataItem.quantity}} units</p>
+        <p><strong>{{ 'products.Discontinued' | translate }}:</strong>&nbsp; <input type="checkbox" [checked]="dataItem.disabled" disabled/></p>
+      </section>
+    </ng-template>
+    
+</kendo-grid>
+            </div>
+          </div>
+          <!-- /.box -->
+          </div>
+          </div>
+          </section>
+         
+        

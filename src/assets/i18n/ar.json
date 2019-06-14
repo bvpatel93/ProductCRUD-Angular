@@ -1,0 +1,33 @@
+{
+    "products": {
+        "ID": "ID",
+        "enname": "الاسم الانجليزي",
+        "arname": "الاسم العربي",
+        "Description":"وصف",
+        "Instock":"في المخزن",
+        "Discontinued":"توقف",
+        "CreatedDate":"تاريخ الإنشاء",
+        "Products":"منتجات",
+        "lstallproduct":"قائمة بجميع المنتجات",
+        "lstproduct":"قائمة المنتجات",
+        "home":"ائم",
+        "addproduct":"أضف منتج",
+        "action":"عمل",
+        "logout":"الخروج",
+        "online":"ممة",
+        "penname":"الاسم الانجليزي",
+        "Parname":"الاسم العربي",
+        "btnsubmit":"خضع",
+        "perdesc":"قائمة بجميع المنتجا",
+        "pardesc":"قائمة بجميع المنتجا",
+        "enqty":"خضع",
+        "provalidationen":"ائمة بجميع المنتجات",
+        "provalidationar":"ائمة بجميع المنتجات",
+        "provalidationdesc":"ائمة بجميع المنتجات",
+        "provalidationqty":"ائمة بجميع المنتجات",
+        "lbllanguage":"بجميع",
+        "lbllangu":"English",
+        "outofstock":"ائمة"
+
+    }
+}

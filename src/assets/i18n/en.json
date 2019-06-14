@@ -1,0 +1,32 @@
+{
+    "products": {
+        "ID": "ID",
+        "enname": "English Name",
+        "arname": "Arabic Name",
+        "Description":"Description",
+        "Instock":"In stock",
+        "Discontinued":"Discontinued",
+        "CreatedDate":"Created Date",
+        "Products":"Products",
+        "lstallproduct":"List of all products",
+        "lstproduct":"Product list",
+        "home":"Home",
+        "addproduct":"Add Product",
+        "action":"Action",
+        "logout":"Log out",
+        "online":"online",
+        "penname":"Product English Name",
+        "Parname":"Product Arabic Namme",
+        "btnsubmit":"Submit",
+        "perdesc":"Enter Product English Name",
+        "pardesc":"Enter Product Arabic Name",
+        "enqty":"Enter Qunatity",
+        "provalidationen":"Please enter product english name",
+        "provalidationar":"Please enter product arabic name",
+        "provalidationdesc":"Please enter product description",
+        "provalidationqty":"Please enter product quantity",
+        "lbllanguage":"Languages",
+        "lbllangu":"خضع",
+        "outofstock":"Out of Stock"
+    }
+}
